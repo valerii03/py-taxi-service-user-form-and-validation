@@ -115,6 +115,7 @@ class DriverDetailView(LoginRequiredMixin, generic.DetailView):
         .prefetch_related("cars__manufacturer")
     )
 
+
 class DriverCreateView(LoginRequiredMixin, generic.CreateView):
     model = get_user_model()
     form_class = DriverCreationForm
